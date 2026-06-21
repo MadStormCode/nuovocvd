@@ -48,7 +48,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
   const daySchedule = [
     { time: dayStart, icon: BookOpen, label: 'Briefing teoria', desc: 'Spiegazione del programma giornaliero e meteo', color: 'bg-amber-50 border-amber-200 text-amber-700' },
     { time: '10:30', icon: Waves, label: 'Armiamo le barche', desc: 'Preparazione delle barche per l' + "'" + 'uscita', color: 'bg-amber-50 border-amber-200 text-amber-700' },
-    { time: '11:00', icon: Waves, label: 'Prima uscita in acqua', desc: 'Esercizi di vela e tecnica con l' + "'" + 'istruttore', color: 'bg-amber-50 border-amber-200 text-amber-700' }
+    { time: '11:00', icon: Waves, label: 'Prima uscita in acqua', desc: 'Esercizi di vela e tecnica con l' + "'" + 'istruttore', color: 'bg-amber-50 border-amber-200 text-amber-700' },
     { time: '13:00', icon: UtensilsCrossed, label: 'Pranzo', desc: 'Pranzo al sacco o mensa', color: 'bg-orange-50 border-orange-200 text-orange-700' },
     { time: '13:45', icon: Coffee, label: 'Pausa relax', desc: 'Tempo libero per riposare e giocare', color: 'bg-stone-50 border-stone-200 text-stone-700' },
     { time: '14:30', icon: Waves, label: 'Seconda uscita in acqua', desc: 'Esercizi avanzati e regate interne', color: 'bg-amber-50 border-amber-200 text-amber-700' },
