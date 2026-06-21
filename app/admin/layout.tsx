@@ -3,30 +3,44 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { useAuth } from '@/components/auth-context';
+import { useAuth }  from '@/components/auth-context';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { 
   LayoutDashboard, BookOpen, Trophy, ClipboardList, Newspaper, ImageIcon, 
-  FileText, Settings, Users, ChevronLeft, Menu, LogOut, Anchor
+  FileText, Settings, Users, ChevronLeft, Menu, LogOut, Anchor, Image, UserCog
 } from 'lucide-react';
 
-const navItems = [
-  { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/admin/corsi', label: 'Corsi', icon: BookOpen },
-  { href: '/admin/regate', label: 'Regate', icon: Trophy },
-  { href: '/admin/iscrizioni', label: 'Iscrizioni', icon: ClipboardList },
-  { href: '/admin/news', label: 'News', icon: Newspaper },
-  { href: '/admin/gallery', label: 'Gallery', icon: ImageIcon },
-  { href: '/admin/documenti', label: 'Documenti', icon: FileText },
-  { href: '/admin/utenti', label: 'Utenti', icon: Users },
-  { href: '/admin/impostazioni', label: 'Impostazioni', icon: Settings },
+type Role = 'admin' | 'segreteria' | 'editor' | 'socio';
+
+interface NavItem {
+  href: string;
+  label: string;
+  icon: any;
+  roles: Role[];
+}
+
+const allNavItems: NavItem[] = [
+  { href: '/admin', label: 'Dashboard', icon: LayoutDashboard, roles: ['admin', 'segreteria', 'editor', 'socio'] },
+  { href: '/admin/corsi', label: 'Corsi', icon: BookOpen, roles: ['admin', 'segreteria', 'editor'] },
+  { href: '/admin/regate', label: 'Regate', icon: Trophy, roles: ['admin', 'segreteria', 'editor'] },
+  { href: '/admin/iscrizioni', label: 'Iscrizioni', icon: ClipboardList, roles: ['admin', 'segreteria'] },
+  { href: '/admin/news', label: 'News', icon: Newspaper, roles: ['admin', 'segreteria', 'editor'] },
+  { href: '/admin/gallery', label: 'Gallery', icon: ImageIcon, roles: ['admin', 'segreteria', 'editor'] },
+  { href: '/admin/documenti', label: 'Documenti', icon: FileText, roles: ['admin', 'segreteria', 'editor'] },
+  { href: '/admin/utenti', label: 'Utenti', icon: Users, roles: ['admin', 'segreteria'] },
+  { href: '/admin/team', label: 'Team', icon: UserCog, roles: ['admin', 'segreteria', 'editor'] },
+  { href: '/admin/images', label: 'Immagini', icon: Image, roles: ['admin', 'segreteria', 'editor'] },
+  { href: '/admin/impostazioni', label: 'Impostazioni', icon: Settings, roles: ['admin'] },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const { user, profile, isLoading, signOut } = useAuth();
+  const role = (profile?.role as Role) || 'socio';
+
+  const navItems = allNavItems.filter(item => item.roles.includes(role));
 
   useEffect(() => {
     if (!isLoading && !user) {
@@ -134,7 +148,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
       {/* Main content */}
       <div className="flex-1 lg:ml-64">
-        <div className="lg:h-16" /> {/* spacer for mobile header */}
+        <div className="lg:h-16" />
         <div className="p-4 lg:p-8">
           {children}
         </div>
