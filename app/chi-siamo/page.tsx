@@ -8,13 +8,12 @@ export const metadata = {
 };
 
 const team = [
-  { name: 'Antonio Cozzoli', role: 'Presidente', desc: 'Presidente del Centro Vela Dervio dal xx' },
-  { name: 'Angela Mastalli', role: 'Istruttrice Optimist & Scuola Vela', desc: 'Specialista Laser Radial e Standard, allenatrice regionale.' },
-  { name: 'Cicio Canali', role: 'Istruttore Laser', desc: 'Esperto laserista e istruttore agonistico.' },
-  { name: 'Davide', role: 'Tuttofare', desc: '-' },
-  { name: 'Erio', role: '-', desc: 'Ex campionessa italiana 420, allenatrice di equipaggi.' },
-  { name: 'Leandro', role: '-', desc: 'Ex atleta skiff, preparatore fisico e tecnico.' },
-  { name: 'Riccardo Benvegnu', role: 'Developer', desc: 'Creatore del sito' },
+  { name: 'Marco Bianchi', role: 'Direttore Sportivo', desc: 'Istruttore FIV dal 1995, ex agonista Optimist e Laser.' },
+  { name: 'Laura Rossi', role: 'Istruttore Laser', desc: 'Specialista Laser Radial e Standard, allenatrice regionale.' },
+  { name: 'Giuseppe Verdi', role: 'Istruttore Derive', desc: 'Esperto di derive leggere, istruttore dal 2008.' },
+  { name: 'Anna Neri', role: 'Istruttore 420', desc: 'Ex campionessa italiana 420, allenatrice di equipaggi.' },
+  { name: 'Roberto Marini', role: 'Istruttore Agonistico', desc: 'Ex atleta skiff, preparatore fisico e tecnico.' },
+  { name: 'Elena Gialli', role: 'Istruttore Bambini', desc: 'Specialista vela giocata, pedagogista sportiva.' },
 ];
 
 const values = [
@@ -50,7 +49,7 @@ export default function ChiSiamoPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 text-slate-600"><CheckCircle className="h-5 w-5 text-[hsl(199,89%,48%)]" /> <span>Scuola FIV riconosciuta</span></div>
                 <div className="flex items-center gap-2 text-slate-600"><CheckCircle className="h-5 w-5 text-[hsl(199,89%,48%)]" /> <span>30+ imbarcazioni</span></div>
-                <div className="flex items-center gap-2 text-slate-600"><CheckCircle className="h-5 w-5 text-[hsl(199,89%,48%)]" /> <span>3 istruttori qualificati</span></div>
+                <div className="flex items-center gap-2 text-slate-600"><CheckCircle className="h-5 w-5 text-[hsl(199,89%,48%)]" /> <span>6 istruttori qualificati</span></div>
                 <div className="flex items-center gap-2 text-slate-600"><CheckCircle className="h-5 w-5 text-[hsl(199,89%,48%)]" /> <span>500+ soci attivi</span></div>
               </div>
             </div>

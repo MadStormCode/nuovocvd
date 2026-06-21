@@ -34,7 +34,7 @@ export default async function CorsiPage() {
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Scuola di Vela</h1>
           <p className="text-white/70 max-w-2xl">
-            Corsi estivi a settimane. Scegli tra corso diurno (solo ore di vela e pranzo) o campus (alloggio + pasti + attivita serali). 
+            Corsi estivi a settimane. Scegli tra corso diurno (solo ore di vela) o campus (alloggio + pasti + attivita serali). 
             Dal 15 giugno al 14 agosto, 8 settimane a disposizione.
           </p>
         </div>

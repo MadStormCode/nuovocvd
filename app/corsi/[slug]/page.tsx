@@ -42,8 +42,8 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
   const dayEnd = course.day_end_time || '17:00';
   const fridayEnd = course.day_friday_end || '17:30';
   const campusNights = course.campus_nights || 5;
-  const campusCheckin = course.campus_checkin || 'Domenica 21:00';
-  const campusCheckout = course.campus_checkout || 'Venerdì  17:30';
+  const campusCheckin = course.campus_checkin || 'Domenica 18:00';
+  const campusCheckout = course.campus_checkout || 'Venerd' + String.fromCharCode(236) + ' 17:30';
 
   const daySchedule = [
     { time: dayStart, icon: BookOpen, label: 'Briefing teoria', desc: 'Spiegazione del programma giornaliero e meteo', color: 'bg-amber-50 border-amber-200 text-amber-700' },
