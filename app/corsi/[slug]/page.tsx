@@ -42,8 +42,8 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
   const dayEnd = course.day_end_time || '17:00';
   const fridayEnd = course.day_friday_end || '17:30';
   const campusNights = course.campus_nights || 5;
-  const campusCheckin = course.campus_checkin || 'Domenica 21:00';
-  const campusCheckout = course.campus_checkout || 'Venerdì 17:30';
+  const campusCheckin = course.campus_checkin || 'Domenica 18:00';
+  const campusCheckout = course.campus_checkout || 'Venerd' + String.fromCharCode(236) + ' 17:30';
 
   const daySchedule = [
     { time: dayStart, icon: BookOpen, label: 'Briefing teoria', desc: 'Spiegazione del programma giornaliero e meteo', color: 'bg-amber-50 border-amber-200 text-amber-700' },
@@ -66,18 +66,18 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
     { time: '17:30', icon: Music, label: 'Attivita ricreative e merenda', desc: 'Merenda, Giochi, sport e tempo libero', color: 'bg-violet-50 border-violet-200 text-violet-700' },
     { time: '19:00', icon: Moon, label: 'Cena e serata', desc: 'Cena in compagnia al ristorante', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
   ];
-
+  
   const schedule = option === 'day' ? daySchedule : campusSchedule;
 
   return (
     <div>
       <section className="relative h-80 overflow-hidden">
-       <Image
-         src="/assets/corso_catamarani.jpg"
-         alt={course.title}
-         fill
-         className="object-cover"
-         priority
+        <Image
+          src={course.image_url || 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920'}
+          alt={course.title}
+          fill
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-6">
