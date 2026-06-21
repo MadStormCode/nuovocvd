@@ -42,27 +42,29 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
   const dayEnd = course.day_end_time || '17:00';
   const fridayEnd = course.day_friday_end || '17:30';
   const campusNights = course.campus_nights || 5;
-  const campusCheckin = course.campus_checkin || 'Domenica 18:00';
-  const campusCheckout = course.campus_checkout || 'Venerd' + String.fromCharCode(236) + ' 17:30';
+  const campusCheckin = course.campus_checkin || 'Domenica 21:00';
+  const campusCheckout = course.campus_checkout || 'Venerdì 17:30';
 
   const daySchedule = [
     { time: dayStart, icon: BookOpen, label: 'Briefing teoria', desc: 'Spiegazione del programma giornaliero e meteo', color: 'bg-amber-50 border-amber-200 text-amber-700' },
-    { time: '10:30', icon: Waves, label: 'Prima uscita in acqua', desc: 'Esercizi di vela e tecnica con l' + "'" + 'istruttore', color: 'bg-amber-50 border-amber-200 text-amber-700' },
-    { time: '12:30', icon: UtensilsCrossed, label: 'Pranzo', desc: 'Pranzo al sacco o mensa', color: 'bg-orange-50 border-orange-200 text-orange-700' },
-    { time: '13:30', icon: Coffee, label: 'Pausa relax', desc: 'Tempo libero per riposare e giocare', color: 'bg-stone-50 border-stone-200 text-stone-700' },
+    { time: '10:30', icon: Waves, label: 'Armiamo le barche', desc: 'Preparazione delle barche per l' + "'" + 'uscita', color: 'bg-amber-50 border-amber-200 text-amber-700' },
+    { time: '11:00', icon: Waves, label: 'Prima uscita in acqua', desc: 'Esercizi di vela e tecnica con l' + "'" + 'istruttore', color: 'bg-amber-50 border-amber-200 text-amber-700' }
+    { time: '13:00', icon: UtensilsCrossed, label: 'Pranzo', desc: 'Pranzo al sacco o mensa', color: 'bg-orange-50 border-orange-200 text-orange-700' },
+    { time: '13:45', icon: Coffee, label: 'Pausa relax', desc: 'Tempo libero per riposare e giocare', color: 'bg-stone-50 border-stone-200 text-stone-700' },
     { time: '14:30', icon: Waves, label: 'Seconda uscita in acqua', desc: 'Esercizi avanzati e regate interne', color: 'bg-amber-50 border-amber-200 text-amber-700' },
-    { time: dayEnd, icon: Sun, label: 'Rientro e doccia', desc: 'Rientro in base, doccia e cambio', color: 'bg-amber-50 border-amber-200 text-amber-700' },
+    { time: dayEnd, icon: Sun, label: 'Rientro e doccia', desc: 'Rientro in base, doccia e saluti', color: 'bg-amber-50 border-amber-200 text-amber-700' },
   ];
 
   const campusSchedule = [
     { time: '08:00', icon: Coffee, label: 'Colazione', desc: 'Colazione tutti insieme in mensa', color: 'bg-blue-50 border-blue-200 text-blue-700' },
     { time: dayStart, icon: BookOpen, label: 'Briefing teoria', desc: 'Spiegazione del programma giornaliero', color: 'bg-blue-50 border-blue-200 text-blue-700' },
-    { time: '10:30', icon: Waves, label: 'Prima uscita in acqua', desc: 'Esercizi di vela con l' + "'" + 'istruttore', color: 'bg-blue-50 border-blue-200 text-blue-700' },
+    { time: '10:30', icon: Waves, label: 'Armiamo le barche', desc: 'Preparazione delle barche per l' + "'" + 'uscita', color: 'bg-amber-50 border-amber-200 text-amber-700' },
+    { time: '11:00', icon: Waves, label: 'Prima uscita in acqua', desc: 'Esercizi di vela con l' + "'" + 'istruttore', color: 'bg-blue-50 border-blue-200 text-blue-700' },
     { time: '12:30', icon: UtensilsCrossed, label: 'Pranzo in mensa', desc: 'Pranzo completo con menu equilibrato', color: 'bg-emerald-50 border-emerald-200 text-emerald-700' },
     { time: '14:00', icon: Waves, label: 'Seconda uscita in acqua', desc: 'Esercizi avanzati e regate interne', color: 'bg-blue-50 border-blue-200 text-blue-700' },
-    { time: dayEnd, icon: Sun, label: 'Rientro e doccia', desc: 'Rientro in base, doccia e cambio', color: 'bg-blue-50 border-blue-200 text-blue-700' },
-    { time: '17:30', icon: Music, label: 'Attivita ricreative', desc: 'Giochi, sport, laboratori e tempo libero', color: 'bg-violet-50 border-violet-200 text-violet-700' },
-    { time: '19:00', icon: Moon, label: 'Cena e serata', desc: 'Cena in compagnia e serata tematica', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
+    { time: dayEnd, icon: Sun, label: 'Rientro e doccia', desc: 'Rientro in base, doccia e saluti', color: 'bg-blue-50 border-blue-200 text-blue-700' },
+    { time: '17:30', icon: Music, label: 'Attivita ricreative e merenda', desc: 'Merenda, Giochi, sport e tempo libero', color: 'bg-violet-50 border-violet-200 text-violet-700' },
+    { time: '19:00', icon: Moon, label: 'Cena e serata', desc: 'Cena in compagnia al ristorante', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
   ];
 
   const schedule = option === 'day' ? daySchedule : campusSchedule;
@@ -70,12 +72,12 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
   return (
     <div>
       <section className="relative h-80 overflow-hidden">
-        <Image
-          src={course.image_url || 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920'}
-          alt={course.title}
-          fill
-          className="object-cover"
-          priority
+       <Image
+         src="/assets/corso_catamarani.jpg"
+         alt={course.title}
+         fill
+         className="object-cover"
+         priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-6">

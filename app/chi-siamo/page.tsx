@@ -8,12 +8,12 @@ export const metadata = {
 };
 
 const team = [
-  { name: 'Marco Bianchi', role: 'Direttore Sportivo', desc: 'Istruttore FIV dal 1995, ex agonista Optimist e Laser.' },
-  { name: 'Laura Rossi', role: 'Istruttore Laser', desc: 'Specialista Laser Radial e Standard, allenatrice regionale.' },
-  { name: 'Giuseppe Verdi', role: 'Istruttore Derive', desc: 'Esperto di derive leggere, istruttore dal 2008.' },
-  { name: 'Anna Neri', role: 'Istruttore 420', desc: 'Ex campionessa italiana 420, allenatrice di equipaggi.' },
-  { name: 'Roberto Marini', role: 'Istruttore Agonistico', desc: 'Ex atleta skiff, preparatore fisico e tecnico.' },
-  { name: 'Elena Gialli', role: 'Istruttore Bambini', desc: 'Specialista vela giocata, pedagogista sportiva.' },
+  { name: 'Antonio Cozzoli', role: 'Presidente', desc: 'Presidente del Centro Vela Dervio dal xx.' },
+  { name: 'Angela Mastalli', role: 'Istruttrice Optimist & Scuola Vela', desc: 'Esperta di derive tra cui Laser e Optimist.' },
+  { name: 'Cicio Canali', role: 'Istruttore Laser', desc: 'Esperto di derive leggere, istruttore dal 2008.' },
+  { name: 'Erio', role: 'Istruttore 420', desc: 'Ex campionessa italiana 420, allenatrice di equipaggi.' },
+  { name: 'Stefano Girola', role: 'Istruttore Scuola Vela Adulti', desc: 'Istrutture Scuola Vela sui Catamarani per adulti.' },
+  { name: 'Riccardo Benvegnù', role: 'Developer', desc: 'Creatore di questo sito web.' },
 ];
 
 const values = [
@@ -28,7 +28,7 @@ export default function ChiSiamoPage() {
     <>
       <section className="bg-[hsl(210,50%,20%)] text-white py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <Image src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=1920" alt="" fill className="object-cover" />
+          <Image src="/assets/img_chisiamo" alt="" fill className="object-cover" />
         </div>
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Chi Siamo</h1>
@@ -40,7 +40,7 @@ export default function ChiSiamoPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800" alt="Centro Vela Dervio" fill className="object-cover" />
+                          <Image src="/assets/img_chisiamo" alt="Centro Vela Dervio" fill className="object-cover" />
             </div>
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-[hsl(210,50%,20%)]">La Nostra Storia</h2>

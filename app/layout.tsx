@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Centro Vela Dervio - Scuola di Vela sul Lago di Como',
   description: 'Corsi di vela per tutti i livelli, regate, eventi e attività nautiche sul Lago di Como. Scuola vela Dervio, società sportiva dilettantistica.',
-  keywords: 'vela, scuola vela, Dervio, Lago di Como, corsi vela, regate, optimist, laser, 420, skiff',
+  keywords: 'vela, scuola vela, Dervio, Lago di Como, corsi vela, regate, optimist, laser',
   openGraph: {
     title: 'Centro Vela Dervio',
     description: 'Scuola di vela sul Lago di Como - Corsi, regate e attività per tutti',

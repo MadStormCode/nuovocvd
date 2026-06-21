@@ -61,7 +61,7 @@ export default async function HomePage() {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://www.centroveladervio.it/wp-content/uploads/2025/12/UfoCorretta.jpeg"
+            src="/assets/UfoCorretta.jpg"
             alt="Vela sul Lago di Como"
             fill
             className="object-cover"

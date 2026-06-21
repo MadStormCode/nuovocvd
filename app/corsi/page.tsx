@@ -29,7 +29,7 @@ export default async function CorsiPage() {
     <>
       <section className="bg-[hsl(210,50%,20%)] text-white py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <Image src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920" alt="" fill className="object-cover" />
+                  <Image src="/assets/corso_optimist.jpeg" alt="" fill className="object-cover" />
         </div>
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Scuola di Vela</h1>

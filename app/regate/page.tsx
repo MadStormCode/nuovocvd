@@ -35,7 +35,7 @@ export default async function RegatePage() {
     <>
       <section className="bg-[hsl(210,50%,20%)] text-white py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <Image src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1920" alt="" fill className="object-cover" />
+          <Image src="/assets/hero_regate" alt="" fill className="object-cover" />
         </div>
         <div className="container relative z-10 mx-auto px-4 lg:px-8">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Regate & Eventi</h1>
